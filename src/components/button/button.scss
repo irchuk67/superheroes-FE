@@ -1,0 +1,76 @@
+@import "src/base";
+
+.button{
+  border: none;
+  padding: 1rem;
+  border-radius: .5rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  transition: all .3s;
+  font-size: 1.3rem;
+
+  &:focus-visible{
+    outline: none;
+  }
+  &:visited{
+    text-decoration: none;
+    color: inherit;
+  }
+  &:focus{
+    color: inherit;
+  }
+
+  button:active {
+    transform: scale(0.99);
+  }
+
+  &__green{
+    background-color: $green-light;
+    &:hover, &:focus{
+      background-color: $green-medium;
+    }
+  }
+
+  &__pink{
+    background-color: $pink-light;
+    &:hover, &:focus{
+      background-color: $pink-medium;
+    }
+  }
+
+  &__lavender{
+    background-color: $lavender-light;
+    &:hover, &:focus{
+      background-color: $lavender-medium;
+    }
+  }
+
+  &__white{
+    background: $white;
+    &--lavender{
+      color: $lavender-dark;
+      &:hover, &:focus{
+        background: $lavender-dark;
+        color: $white;
+      }
+    }
+    &--green{
+      color: $green-dark;
+      &:hover, &:focus{
+        background: $green-dark;
+        color: $white;
+      }
+    }
+    &--gray{
+      color: $gray;
+      &:hover, &:focus{
+        background: $gray;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+
+

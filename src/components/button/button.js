@@ -1,14 +1,7 @@
-import React, {ReactNode} from "react";
+import React from "react";
 import './button.scss';
 
-interface ButtonProps {
-    onButtonClick?(event: React.MouseEvent<HTMLElement>):void,
-    className?: string
-    buttonType?: "button" | "submit" | "reset",
-    children: ReactNode
-}
-
-const Button = (props: ButtonProps) => {
+const Button = (props) => {
     return (
         <button onClick={props.onButtonClick} className={props.className} type={props.buttonType || 'button'}>
             {props.children}
@@ -16,5 +9,4 @@ const Button = (props: ButtonProps) => {
     )
 }
 
-const ButtonComponent = React.memo(Button);
-export default ButtonComponent;
+export default Button;

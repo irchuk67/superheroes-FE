@@ -1,0 +1,45 @@
+@import "../../base";
+
+.superhero-list{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  //justify-items: center;
+  grid-column-gap: 2rem;
+
+  padding: 2rem 0;
+  width: 95vw;
+  overflow-x: scroll ;
+  scrollbar-width: thin;
+  scrollbar-color: $lavender transparent;
+  &__item{
+    border-radius: 1.5rem;
+    background-color: white;
+    box-shadow: 0 0 1.5rem rgba($lavender, .8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+
+
+    &--image{
+      margin: 0 3rem;
+      height: 20rem;
+      width: 20rem;
+      border-radius: .5rem;
+      object-fit: cover;
+    }
+
+    &--nick{
+      font-size: 2rem;
+      margin-top: 6rem;
+      padding: .5rem;
+      align-self: stretch;
+      justify-self: end;
+      text-align: center;
+      background-color: $lavender;
+      border-radius: .5rem;
+    }
+  }
+
+
+}

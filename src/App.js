@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import SuperheroList from "./components/SuperheroesList/SuperheroList";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import SuperheroItem from "./components/SuperheroItem/SuperheroItem";
+import CreateSuperhero from "./components/CreateSuperhero/CreateSuperhero";
+import './base.scss';
+import SuperheroesOverview from "./components/SuperheroesOverview/SuperheroesOverview";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path={'/'} element={<SuperheroesOverview/>}/>
+                <Route path={'/:superheroId/*'} element={<SuperheroItem/>}/>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

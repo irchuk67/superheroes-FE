@@ -1,0 +1,46 @@
+@import "src/base";
+
+.slider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__container{
+    display: flex;
+    max-width: 30vw;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: $lavender transparent;
+    transition: scroll 0.3s ease-in-out;
+
+    &--image{
+      height: 90vh;
+    }
+  }
+
+  &__button{
+    height: 100%;
+    width: 5rem;
+    color: $white;
+    font-weight: lighter;
+    font-size: medium;
+    &--right {
+      margin-left: 2rem;
+      & p{
+        transform: rotate(90deg);
+      }
+    }
+
+    &--left {
+      margin-right: 2rem;
+
+      & p {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &:hover, &:focus{
+      color: $white;
+    }
+  }
+}

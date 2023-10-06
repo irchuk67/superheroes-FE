@@ -1,12 +1,39 @@
-@import "../../base";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
 
-.loading{
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.heading {
+  font-size: 4rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  background: linear-gradient(to left bottom, #dbc0fd, #8b37f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+.loading {
   z-index: 99;
   position: fixed;
   width: 100px;
   padding: 10px;
   top: 50%;
-
   display: flex;
   justify-content: center;
   align-content: center;
@@ -15,15 +42,15 @@
   margin-top: -100px;
   margin-left: -50px;
   border-radius: 0.5rem;
-  &__text{
-    text-align: center;
-    text-shadow: 1px 0 10px $white;
-    font-size: 1.5rem;
-    margin-top: .5rem;
-  }
+}
+.loading__text {
+  text-align: center;
+  text-shadow: 1px 0 10px #fff;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
 }
 
-#inner{
+#inner {
   animation: rotate linear;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -31,36 +58,29 @@
   transform-box: border-box;
 }
 
-
-#outer
-{
+#outer {
   animation: rotate-inverse linear;
-
   animation-duration: 4s;
   animation-iteration-count: infinite;
   transform-origin: center;
   transform-box: border-box;
-
 }
 
 @keyframes rotate {
-  0%
-  {
+  0% {
     transform: rotateZ(0deg);
   }
-  100%
-  {
+  100% {
     transform: rotateZ(360deg);
+  }
+}
+@keyframes rotate-inverse {
+  0% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
   }
 }
 
-@keyframes rotate-inverse {
-  0%
-  {
-    transform: rotateZ(360deg);
-  }
-  100%
-  {
-    transform: rotateZ(0deg);
-  }
-}
+/*# sourceMappingURL=Loading.css.map */

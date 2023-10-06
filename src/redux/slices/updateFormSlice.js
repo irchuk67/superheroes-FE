@@ -4,8 +4,8 @@ const initialState = {
     isOpen: false
 }
 
-const AddFormSlice = createSlice({
-    name: 'addForm',
+const UpdateFormSlice = createSlice({
+    name: 'updateForm',
     initialState,
     reducers:{
         open: (state) => {
@@ -17,5 +17,5 @@ const AddFormSlice = createSlice({
     }
 })
 
-export default AddFormSlice.reducer;
-export const {open, close} = AddFormSlice.actions;
+export default UpdateFormSlice.reducer;
+export const {open, close} = UpdateFormSlice.actions;

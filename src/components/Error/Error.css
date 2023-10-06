@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.heading {
+  font-size: 4rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  background: linear-gradient(to left bottom, #dbc0fd, #8b37f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+.error__wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.error__heading {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #ff2424;
+}
+
+/*# sourceMappingURL=Error.css.map */

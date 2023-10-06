@@ -1,0 +1,42 @@
+//colors
+$black: #000000;
+$black-blue: #190a2d;
+$blue-purple: #8b37f5;
+$lavender: #dbc0fd;
+$gray: #c4c4c4;
+$gray-dark: #5e5e5e;
+$white: #fff;
+$danger: #ff2424;
+
+//basic styles
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+
+.heading{
+  font-size: 4rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  background: linear-gradient(to left bottom, $lavender, $blue-purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}

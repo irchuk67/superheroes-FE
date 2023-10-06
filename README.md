@@ -1,4 +1,4 @@
-# How to start FE application
+# How to start FrontEnd application
 
 0) On your computer should be installed git, npm, and also it is needed BE to be started.
 1) On GitHub, find the link of the project and copy it.

@@ -84,7 +84,7 @@ const SuperheroForm = ({initialValues, handleSubmit, title, buttonText, onClose}
                 onSubmit={handleSubmit}
                 validationSchema={validationSchema}
                 render={
-                    ({setFieldValue}) => {
+                    ({setFieldValue, values}) => {
                         return (
                             <Form className={'superhero-form'}>
                                 <h1 className={'superhero-form__heading'}>{title}</h1>
@@ -130,6 +130,7 @@ const SuperheroForm = ({initialValues, handleSubmit, title, buttonText, onClose}
                                     </label>
                                     <textarea
                                         ref={textAreaRef}
+                                        value={values.origin_description}
                                         name={'origin_description'}
                                         id={'origin_description'}
                                         className={'superhero-form__field--long-text'}
@@ -142,15 +143,15 @@ const SuperheroForm = ({initialValues, handleSubmit, title, buttonText, onClose}
                                 </div>
                                 <div className={'superhero-form__superpowers'}>
                                     <div className={'superhero-form__superpowers--header'}>
-                                       <div className={"superhero-form__label-with-error"}>
-                                           <label htmlFor="checkbox-group"
-                                                  className={'superhero-form__field--label'}>Superpowers</label>
+                                        <div className={"superhero-form__label-with-error"}>
+                                            <label htmlFor="checkbox-group"
+                                                   className={'superhero-form__field--label'}>Superpowers</label>
 
-                                           <ErrorMessage
-                                               name={'superpowers'}
-                                               render={msg => <span className={'superhero-form__error'}>{msg}</span>}
-                                           />
-                                       </div>
+                                            <ErrorMessage
+                                                name={'superpowers'}
+                                                render={msg => <span className={'superhero-form__error'}>{msg}</span>}
+                                            />
+                                        </div>
 
                                         <div className={'superhero-form__superpowers--add'}>
                                             <label>

@@ -97,7 +97,7 @@ const SuperheroItem = (props) => {
                     </div>
                     <div className={"superhero__field"}>
                         <p className={"superhero__field--name"}>Catch phrase:</p>
-                        <p className={"superhero__field--value"}>{catch_phrase}</p>
+                        <p className={"superhero__field--value"}>"{catch_phrase}"</p>
                     </div>
                     <div className={"superhero__superpowers"}>
                         <p className={"superhero__field--name  superhero__superpowers--title"}>Superpowers:</p>

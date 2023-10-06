@@ -38,7 +38,7 @@
 
   &__field{
     display: flex;
-    align-items: end;
+    align-items: start;
     color: $black-blue;
     &--name{
       font-size: 1.75rem;
@@ -55,8 +55,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    //grid-template-columns: repeat(auto-fill, minmax(min-content, max-content));
-    //grid-gap: 1rem;
 
     &--title{
       grid-column: 1/-1;
@@ -71,6 +69,8 @@
 
     &--superpower{
       background: $lavender;
+      color: $white;
+      text-shadow: 0 1px 2px rgba($black, .5);
       text-align: center;
       padding: 1rem 2rem;
       font-size: 1.25rem;
